@@ -21,7 +21,7 @@ import Head from "next/head";
 
 const SingleBlog = ({ data }: { data: any }) => {
 
-  console.log(data);
+  console.log('data is',data);
   // data=JSON.parse(data)
 
   return (
