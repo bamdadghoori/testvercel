@@ -86,7 +86,7 @@ export async function getServerSideProps(context: any) {
   console.log(context.params.id);
   var data: any = {};
   var axios = require('axios');
-
+var error:any={}
 var config = {
   method: 'get',
   url: `https://api.flamincode.com/api/v1/Blog/${id}`,
@@ -99,12 +99,14 @@ axios(config)
   console.log('test postman',JSON.stringify(response.data));
   data=JSON.stringify(response.data)
 })
-.catch(function (error:any) {
+.catch(function (er:any) {
+  error=er;
   console.log(error);
+
 });
 console.log('line 96',data)
  return {
-    props: { data }, // will be passed to the page component as props
+    props: { data:data,error:error }, // will be passed to the page component as props
   };
 }
 //   const controller = new AbortController();
