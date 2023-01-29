@@ -5,6 +5,8 @@ import Comments from "../../../public/components/singleBlogComponents/comments";
 import CommentForm from "../../../public/components/singleBlogComponents/commentForm";
 import NewsLetterSubscribe from "../../../public/components/newsLetterSubscribe";
 import axios from "axios";
+import { baseUrlPages } from "../../../public/apiFunctions";
+import { imgSizeBlogs } from "../../../public/components/constants";
 import https from "https";
 import http from "http"
 import { baseUrl } from "../../../public/apiFunctions";
@@ -23,18 +25,36 @@ const SingleBlog = ({ data,error }: { data: any ,error:any}) => {
 
   console.log('data is',data);
   console.log('error is',error);
-  // data=JSON.parse(data)
+  data=JSON.parse(data)
 
   return (
     <>
-     {/* <TopSection data={data}/>
+      <Head>
+      <title>{data.title}</title>
+    
+      <meta name="author" content={data.authorName}/>
+      <meta property="og:image" content={`${baseUrl}${data.coverImageUrl}`}/>
+      <meta name="description" content={data.metaDescription} />
+      <link rel="canonical" href={`${baseUrlPages}/blog/${data.title}`}/>
+      <meta name="robots" content={`${data.isNoFollow ? 'nofollow':'follow'},${data.isNoIndex ? 'noindex':'index'},max-image-preview:large, max-snippet:-1, max-video-preview:-1`}></meta>
+      <meta property="og:description" content={data.metaDescription}/>
+      <meta property="article:published_time" content={data.creationDate} />
+      <meta property="article:modified_time" content={data.lastModifiedDate}/>
+      <meta name="twitter:label1" content="Est. reading time" />
+      <meta name="twitter:data1" content={data.estimatedReadingTime} />
+      
+      <meta property="og:image:height" content={imgSizeBlogs.width}/> 
+      <meta property="og:image:width" content={imgSizeBlogs.height}/> 
+     
+    </Head> 
+     <TopSection data={data}/>
         <div className="container">
           <div className='max-w-2xl mx-auto'>
            <MainComponent data={data}/>
            <Comments  data={data}/>
            <CommentForm  data={data}/>y
            </div>
-          </div> */}
+          </div>
       <NewsLetterSubscribe />
     </>
   );
