@@ -8,7 +8,7 @@ import { UserContext,UserProvider } from './userContext'
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import PerfectScrollbar from 'react-perfect-scrollbar'
 //@ts-ignore
-import { Scrollbars } from 'react-custom-scrollbars';
+// import { Scrollbars } from 'react-custom-scrollbars';
 export default function AdminLayout({ children }) {
 
 
@@ -58,18 +58,18 @@ useEffect(()=>{
        
       <main className='relative h-full max-h-screen transition-all duration-200 ease-in-out xl:ml-68 rounded-xl ps ps--active-y'>
       <>
-      <Scrollbars   style={{ height:'100vh' }}
+      {/* <Scrollbars   style={{ height:'100vh' }}
       renderView={props => <div {...props} className="view"/>}
       renderTrackVertical={props => <div {...props} className="track-vertical"/>}
       renderThumbVertical={props => <div {...props} className="thumb-vertical"/>}
-     >
+     > */}
       <Navbar showSideBar={showSideBar} changeSideBarVisibility={changeSideBarVisibility} />
       <div className='w-full px-6 py-6 mx-auto'>
      
       {children}
       <Footer/>
       </div>
-      </Scrollbars>
+      {/* </Scrollbars> */}
       </>
      
       

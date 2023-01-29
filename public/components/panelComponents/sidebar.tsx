@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/router";
 import ProgressLoading from "../progressLoadingPanel";
 //@ts-ignore
-import { Scrollbars } from "react-custom-scrollbars";
+// import { Scrollbars } from "react-custom-scrollbars";
 import { stat } from "fs";
 
 const Sidebar = ({
@@ -172,7 +172,7 @@ const Sidebar = ({
         <hr className="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent dark:bg-gradient-to-r dark:from-transparent dark:via-white dark:to-transparent" />
 
         <div className="items-center scrollable-list block w-auto  grow basis-full">
-          <Scrollbars
+          {/* <Scrollbars
             style={{ height: "45vh" }}
             renderView={(props: any) => <div {...props} className="view" />}
             renderTrackVertical={(props: any) => (
@@ -181,7 +181,7 @@ const Sidebar = ({
             renderThumbVertical={(props: any) => (
               <div {...props} className="thumb-vertical" />
             )}
-          >
+          > */}
             <ul className="flex flex-col pl-0 mb-0">
               {PagesName.map((el: any, i: number) => {
                 return (
@@ -330,7 +330,7 @@ const Sidebar = ({
                 );
               })}
             </ul>
-          </Scrollbars>
+          {/* </Scrollbars> */}
         </div>
 
         <div className="mx-4">
