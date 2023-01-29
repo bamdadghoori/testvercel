@@ -95,7 +95,7 @@ var config = {
   // timeout:10000
 };
 
-axios(config)
+await axios(config)
 .then(function (response:any) {
   console.log('test postman',JSON.stringify(response.data));
   data=JSON.stringify(response.data)
