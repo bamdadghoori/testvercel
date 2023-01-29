@@ -37,7 +37,7 @@ const MainSection = ({
   const goToPage = async (id: number) => {
     setLoading(true);
     console.log(id);
-    await router.push(`/single-blog?id=${id}`);
+    await router.push(`/blog/${id}`);
     setLoading(false);
   };
 
