@@ -89,7 +89,7 @@ export async function getServerSideProps(context: any) {
 
 var config = {
   method: 'get',
-  url: 'https://api.flamincode.com/api/v1/Blog/146',
+  url: `https://api.flamincode.com/api/v1/Blog/${id}`,
   headers: {"Accept-Encoding": "gzip,deflate,compress" },
   // timeout:10000
 };
