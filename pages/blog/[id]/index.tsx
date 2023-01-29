@@ -19,9 +19,10 @@ import Head from "next/head";
 //   rejectUnauthorized: false,
 // });
 
-const SingleBlog = ({ data }: { data: any }) => {
+const SingleBlog = ({ data,error }: { data: any ,error:any}) => {
 
   console.log('data is',data);
+  console.log('error is',error);
   // data=JSON.parse(data)
 
   return (
