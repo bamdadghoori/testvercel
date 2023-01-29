@@ -5,9 +5,7 @@ import Script from 'next/script'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { successMessageContext } from '../public/components/successMessageContext';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-import 'react-quill/dist/quill.snow.css';
-import 'react-quill/dist/quill.bubble.css';
-import 'react-quill/dist/quill.core.css';
+
 import AdminLayout from '../public/components/panelComponents/adminLayout';
 import Head from 'next/head'
 console.log(2)

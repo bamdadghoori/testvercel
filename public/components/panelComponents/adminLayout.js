@@ -7,6 +7,7 @@ import DeleteModal from './blogsManagement/deleteModal'
 import { UserContext,UserProvider } from './userContext'
 import 'react-perfect-scrollbar/dist/css/styles.css';
 import PerfectScrollbar from 'react-perfect-scrollbar'
+//@ts-ignore
 import { Scrollbars } from 'react-custom-scrollbars';
 export default function AdminLayout({ children }) {
 

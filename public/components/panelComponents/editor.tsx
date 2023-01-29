@@ -4,8 +4,9 @@ import { EditorState,ContentState, convertFromHTML  } from 'draft-js';
 
 import {stateToHTML} from 'draft-js-export-html';
 import QuillToolbar, { modules, formats } from '../../components/editToobar'
-import ReactQuill from 'react-quill';
 //@ts-ignore
+import ReactQuill from 'react-quill';
+
 
 
 
@@ -27,7 +28,7 @@ console.log(data)
       <ReactQuill
         theme="snow"
         value={data}
-         onChange={(e)=>{console.log(e);setCkEditorDataToFullText(e)}}
+         onChange={(e:any)=>{console.log(e);setCkEditorDataToFullText(e)}}
        
         placeholder={"Write something awesome..."}
         modules={modules}
