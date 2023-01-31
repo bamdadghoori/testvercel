@@ -5,7 +5,7 @@ import Script from 'next/script'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { successMessageContext } from '../public/components/successMessageContext';
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
-
+import { Analytics } from '@vercel/analytics/react';
 import AdminLayout from '../public/components/panelComponents/adminLayout';
 import Head from 'next/head'
 console.log(2)
