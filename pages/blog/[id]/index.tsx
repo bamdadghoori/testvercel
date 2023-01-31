@@ -52,7 +52,7 @@ const SingleBlog = ({ data,error }: { data: any ,error:any}) => {
           <div className='max-w-2xl mx-auto'>
            <MainComponent data={data}/>
            <Comments  data={data}/>
-           <CommentForm  data={data}/>y
+           <CommentForm  data={data}/>
            </div>
           </div>
       <NewsLetterSubscribe />
